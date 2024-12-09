@@ -1,5 +1,5 @@
 //
-//  BasicHapticFeedbackGeneratable.swift
+//  HapticFeedbackGeneratable.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,19 +13,19 @@ import Foundation
 
 
 
-// MARK: - BasicHapticFeedbackGeneratable
+// MARK: - HapticFeedbackGeneratable
 
 ///
 ///
 ///
 @MainActor
 @available(iOS 18.0, *)
-public protocol BasicHapticFeedbackGeneratable: AnyObject {
+public protocol HapticFeedbackGeneratable: AnyObject {
 
     // MARK: - Public methods
 
     ///
     ///
     ///
-    func generate(with feedbackType: BasicHaptic.FeedbackType)
+    func generate(with feedbackType: HapticFeedback.FeedbackType)
 }

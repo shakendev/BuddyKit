@@ -1,5 +1,5 @@
 //
-//  BasicHaptic.Intensity.swift
+//  HapticFeedback.Intensity.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,10 +13,10 @@ import Foundation
 
 
 
-// MARK: - BasicHaptic.Intensity
+// MARK: - HapticFeedback.Intensity
 
 @available(iOS 18.0, *)
-extension BasicHaptic {
+extension HapticFeedback {
 
     // MARK: - Public enumerations
 

@@ -1,5 +1,5 @@
 //
-//  BasicHaptic.swift
+//  HapticFeedback.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,13 +13,13 @@ import UIKit
 
 
 
-// MARK: - BasicHaptic
+// MARK: - HapticFeedback
 
 ///
 ///
 ///
 @available(iOS 18.0, *)
-public final class BasicHaptic: BasicHapticFeedbackGeneratable {
+public final class HapticFeedback: HapticFeedbackGeneratable {
 
     // MARK: - Private properties
 
