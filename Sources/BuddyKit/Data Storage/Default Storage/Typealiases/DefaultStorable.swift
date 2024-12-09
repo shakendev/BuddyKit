@@ -1,5 +1,5 @@
 //
-//  FSNDefaultStorable.swift
+//  DefaultStorable.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,10 +13,10 @@ import Foundation
 
 
 
-// MARK: - FSNDefaultStorable
+// MARK: - DefaultStorable
 
 ///
 ///
 ///
 @available(iOS 18.0, *)
-public typealias FSNDefaultStorable = FSNDefaultLoadable & FSNDefaultRemovable & FSNDefaultReplaceable & FSNDefaultSaveable
+public typealias DefaultStorable = DefaultLoadable & DefaultRemovable & DefaultReplaceable & DefaultSaveable

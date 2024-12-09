@@ -1,5 +1,5 @@
 //
-//  FSNDefaultReplaceable.swift
+//  DefaultSaveable.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,13 +13,13 @@ import Foundation
 
 
 
-// MARK: - FSNDefaultReplaceable
+// MARK: - DefaultSaveable
 
 ///
 ///
 ///
 @available(iOS 18.0, *)
-public protocol FSNDefaultReplaceable: AnyObject {
+public protocol DefaultSaveable: AnyObject {
 
     // MARK: - Public methods
 
@@ -27,5 +27,5 @@ public protocol FSNDefaultReplaceable: AnyObject {
     ///
     ///
     @discardableResult
-    func replace<Object: FSNDataEncodable>(_ object: Object, forKey key: String) -> Bool
+    func save<Object: DataEncodable>(_ object: Object, forKey key: String) -> Bool
 }

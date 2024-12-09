@@ -1,5 +1,5 @@
 //
-//  FSNDefaultStorage.swift
+//  DefaultStorage.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,13 +13,13 @@ import Foundation
 
 
 
-// MARK: - FSNDefaultStorage
+// MARK: - DefaultStorage
 
 ///
 ///
 ///
 @available(iOS 18.0, *)
-public final class FSNDefaultStorage {
+public final class DefaultStorage {
 
     // MARK: - Private properties
 
@@ -40,16 +40,16 @@ public final class FSNDefaultStorage {
 
 
 
-// MARK: - FSNDefaultLoadable
+// MARK: - DefaultLoadable
 
-extension FSNDefaultStorage: FSNDefaultLoadable {
+extension DefaultStorage: DefaultLoadable {
 
     // MARK: - Public methods
 
     ///
     ///
     ///
-    public func load<Object: FSNDataDecodable>(_ type: Object.Type, forKey key: String) -> Object? {
+    public func load<Object: DataDecodable>(_ type: Object.Type, forKey key: String) -> Object? {
         guard
             let object = userDefaults.object(forKey: key) as? Data,
             let loadedObject = try? decoder.decode(type, from: object)
@@ -63,9 +63,9 @@ extension FSNDefaultStorage: FSNDefaultLoadable {
 
 
 
-// MARK: - FSNDefaultRemovable
+// MARK: - DefaultRemovable
 
-extension FSNDefaultStorage: FSNDefaultRemovable {
+extension DefaultStorage: DefaultRemovable {
 
     // MARK: - Public methods
 
@@ -98,9 +98,9 @@ extension FSNDefaultStorage: FSNDefaultRemovable {
 
 
 
-// MARK: - FSNDefaultReplaceable
+// MARK: - DefaultReplaceable
 
-extension FSNDefaultStorage: FSNDefaultReplaceable {
+extension DefaultStorage: DefaultReplaceable {
 
     // MARK: - Public methods
 
@@ -108,16 +108,16 @@ extension FSNDefaultStorage: FSNDefaultReplaceable {
     ///
     ///
     @discardableResult
-    public func replace<Object: FSNDataEncodable>(_ object: Object, forKey key: String) -> Bool {
+    public func replace<Object: DataEncodable>(_ object: Object, forKey key: String) -> Bool {
         save(object, forKey: key)
     }
 }
 
 
 
-// MARK: - FSNDefaultSaveable
+// MARK: - DefaultSaveable
 
-extension FSNDefaultStorage: FSNDefaultSaveable {
+extension DefaultStorage: DefaultSaveable {
 
     // MARK: - Public methods
 
@@ -125,7 +125,7 @@ extension FSNDefaultStorage: FSNDefaultSaveable {
     ///
     ///
     @discardableResult
-    public func save<Object: FSNDataEncodable>(_ object: Object, forKey key: String) -> Bool {
+    public func save<Object: DataEncodable>(_ object: Object, forKey key: String) -> Bool {
         guard let data = try? encoder.encode(object) else {
             return false
         }

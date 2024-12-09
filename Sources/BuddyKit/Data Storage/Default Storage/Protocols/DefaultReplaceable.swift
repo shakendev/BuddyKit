@@ -1,5 +1,5 @@
 //
-//  FSNDefaultLoadable.swift
+//  DefaultReplaceable.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,18 +13,19 @@ import Foundation
 
 
 
-// MARK: - FSNDefaultLoadable
+// MARK: - DefaultReplaceable
 
 ///
 ///
 ///
 @available(iOS 18.0, *)
-public protocol FSNDefaultLoadable: AnyObject {
+public protocol DefaultReplaceable: AnyObject {
 
     // MARK: - Public methods
 
     ///
     ///
     ///
-    func load<Object: FSNDataDecodable>(_ type: Object.Type, forKey key: String) -> Object?
+    @discardableResult
+    func replace<Object: DataEncodable>(_ object: Object, forKey key: String) -> Bool
 }
