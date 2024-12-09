@@ -1,5 +1,5 @@
 //
-//  FSNDefaultSaveable.swift
+//  DefaultLoadable.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,19 +13,18 @@ import Foundation
 
 
 
-// MARK: - FSNDefaultSaveable
+// MARK: - DefaultLoadable
 
 ///
 ///
 ///
 @available(iOS 18.0, *)
-public protocol FSNDefaultSaveable: AnyObject {
+public protocol DefaultLoadable: AnyObject {
 
     // MARK: - Public methods
 
     ///
     ///
     ///
-    @discardableResult
-    func save<Object: FSNDataEncodable>(_ object: Object, forKey key: String) -> Bool
+    func load<Object: DataDecodable>(_ type: Object.Type, forKey key: String) -> Object?
 }

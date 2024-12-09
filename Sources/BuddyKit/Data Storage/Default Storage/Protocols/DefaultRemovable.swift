@@ -1,5 +1,5 @@
 //
-//  FSNDefaultRemovable.swift
+//  DefaultRemovable.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,13 +13,13 @@ import Foundation
 
 
 
-// MARK: - FSNDefaultRemovable
+// MARK: - DefaultRemovable
 
 ///
 ///
 ///
 @available(iOS 18.0, *)
-public protocol FSNDefaultRemovable: AnyObject {
+public protocol DefaultRemovable: AnyObject {
 
     // MARK: - Public methods
 

@@ -1,5 +1,5 @@
 //
-//  FSNDataDecodable.swift
+//  DataDecodable.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,10 +13,10 @@ import Foundation
 
 
 
-// MARK: - FSNDataDecodable
+// MARK: - DataDecodable
 
 ///
 ///
 ///
 @available(iOS 18.0, *)
-public typealias FSNDataDecodable = Decodable
+public typealias DataDecodable = Decodable

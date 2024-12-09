@@ -1,5 +1,5 @@
 //
-//  FSNDataEncodable.swift
+//  DataEncodable.swift
 //  BuddyKit
 //
 //  Created by Dimka Novikov on 09.12.2024.
@@ -13,10 +13,10 @@ import Foundation
 
 
 
-// MARK: - FSNDataEncodable
+// MARK: - DataEncodable
 
 ///
 ///
 ///
 @available(iOS 18.0, *)
-public typealias FSNDataEncodable = Encodable
+public typealias DataEncodable = Encodable
